@@ -1,5 +1,5 @@
 
-<img src="src/assets/logo-sea.png" alt="Alt Text" width="300" height="200" />
+<img src="src/assets/logo-sea.png" alt="Alt Text" width="200" />
 
 ![Alt Text](src/readme/homepage.png)
 ![Alt Text](src/readme/explore.png)
