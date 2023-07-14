@@ -1,5 +1,10 @@
-#SEACinema
+# SEACinema
 ![Alt Text](src/readme/homepage.png)
+![Alt Text](src/readme/explore.png)
+![Alt Text](src/readme/budgetpage.png)
+![Alt Text](src/readme/seatscinema.png)
+![Alt Text](src/readme/billinginfo.png)
+
 SEACinema is a project that I built as part of the SEA Compfest challenge. The main goal of this project is to create a movie-ticketing website. Throughout the development process, I gained valuable experience in creating dynamic user interfaces, combining different logics, and working with APIs.
 
 The app includes various features, such as a user authentication system implemented using Firebase. Users are able to top up and withdraw their balance, as well as book cinema seats. To enhance the user experience, the app utilizes localStorage to maintain and retrieve user input, ensuring that their selections are preserved even if the page is refreshed.
