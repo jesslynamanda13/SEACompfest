@@ -1,4 +1,6 @@
-![logo](src/assets/logo-sea.png)
+
+<img src="src/assets/logo-sea.png" alt="Alt Text" width="300" height="200" />
+
 ![Alt Text](src/readme/homepage.png)
 ![Alt Text](src/readme/explore.png)
 ![Alt Text](src/readme/budgetpage.png)
