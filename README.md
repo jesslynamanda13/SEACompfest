@@ -1,4 +1,4 @@
-# SEACinema
+![logo](src/assets/logo-sea.png)
 ![Alt Text](src/readme/homepage.png)
 ![Alt Text](src/readme/explore.png)
 ![Alt Text](src/readme/budgetpage.png)
