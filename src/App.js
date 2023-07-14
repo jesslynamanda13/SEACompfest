@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter,Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
@@ -23,19 +23,16 @@ function App() {
           <Route path="/" element={ <Home/> } />
           <Route path="/sign-in" element={ <SignIn/> } />
           <Route path="/sign-up" element={ <SignUp/> } />
-          <Route path = "/budget" element = { <Budget/>}/>
-          <Route path ="/budget-topup" element = {<Topup/>}/>
-          <Route path = "/budget-withdraw" element = {<Withdraw/>}/>
+          <Route path = "/budget" element = {<ProtectedRoute><Budget/></ProtectedRoute>}/>
+          <Route path ="/budget-topup" element = {<ProtectedRoute><Topup/></ProtectedRoute>}/>
+          <Route path = "/budget-withdraw" element = {<ProtectedRoute><Withdraw/></ProtectedRoute>}/>
           <Route path = "/explore" element = {<ProtectedRoute><Explore/></ProtectedRoute>}/>
-          <Route path="/movies/:id/description" element = {<MovieDescription/>}/>
-          <Route path = "/movies/:id/booking" element = {<BookingForm/>}/> 
-          <Route path = "/movies/:id/form" element = {<UserPaymentForm/>}/> 
-          <Route path = "/log-out" element = {<LogoutBtn />}/> 
-          <Route path = "/movies/:id/payment" element = {<Payment/>}/>
-          <Route path = "/paymentsuccess" element = {<PaymentSuccess/>}/>
+          <Route path="/movies/:id/description" element = {<ProtectedRoute><MovieDescription/></ProtectedRoute>}/>
+          <Route path = "/movies/:id/booking" element = {<ProtectedRoute><BookingForm/></ProtectedRoute>}/> 
+          <Route path = "/movies/:id/form" element = {<ProtectedRoute><UserPaymentForm/></ProtectedRoute>}/> 
+          <Route path = "/movies/:id/payment" element = {<ProtectedRoute><Payment/></ProtectedRoute>}/>
+          <Route path = "/paymentsuccess" element = {<ProtectedRoute><PaymentSuccess/></ProtectedRoute>}/>
 
-          
-           {/* <Route path="/movies-:id/booking" element = {<BookingForm />}/>  */}
       </Routes>
     </div>
   );

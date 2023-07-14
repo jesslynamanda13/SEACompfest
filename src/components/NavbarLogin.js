@@ -3,7 +3,6 @@ import logo from "../assets/logo-sea.png"
 import { useNavigate } from 'react-router-dom';
 import { BudgetContext } from '../components/context/BudgetContext';
 import { useUserAuth } from './context/UserAuthContext';
-import LogoutBtn from './LogoutBtn';
 
 
 const NavbarLogin = () => {

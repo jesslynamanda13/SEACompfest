@@ -17,7 +17,6 @@ const UserPaymentForm = () => {
     const [error, setError] = useState("");
     const [showAlert, setShowAlert] = useState(false);
     const { username, userage, updateUser } = useContext(BookingContext);
-    
 
     useEffect(() => {
       axios.get('https://seleksi-sea-2023.vercel.app/api/movies')
@@ -103,6 +102,7 @@ const UserPaymentForm = () => {
                 className = "w-72 mt-2 shadow appearance-none border rounded-lg w-300 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 onClick={(e) => setAge(e.target.value)}
             />
+            <p className='mt-2'>Enter to submit!</p>
             <button 
             className="w-64 mt-8 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline"
             type="submit">

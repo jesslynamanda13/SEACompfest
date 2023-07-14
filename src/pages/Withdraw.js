@@ -1,16 +1,12 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { BudgetContext } from  '../components/context/BudgetContext';
 import { useNavigate } from 'react-router-dom';
-// import { PaymentHistoryContext } from '../components/PaymentHistoryContext';
 
 const Withdraw = () => {
 const navigate = useNavigate();
   const [balance, setBalance] = useContext(BudgetContext);
   const [newBalance, setNewBalance] = useState(balance);
-  const [error, setError] = useState('');
-  // const [paymentHistory, setPaymentHistory] = useContext(PaymentHistoryContext);
-
-  useEffect(() => {
+  const [error, setError] = useState('');  useEffect(() => {
     const storedBalance = localStorage.getItem('budget');
     if (storedBalance) {
       setBalance(parseInt(storedBalance));
@@ -24,8 +20,6 @@ const navigate = useNavigate();
         setBalance(balance);
     }else{
         setBalance(newBalance);
-        // setPaymentHistory(prevHistory => [...prevHistory, payment]);
-        // localStorage.setItem('paymentHistory', JSON.stringify([...paymentHistory, payment]));
         localStorage.setItem('budget', newBalance.toString());
         navigate('/budget');
     }

@@ -6,8 +6,6 @@ import MovieAllList from '../components/MovieAllList';
 import LogoutBtn from '../components/LogoutBtn.js';
 
 const Explore = () => {
-  
-  // const isLoggedIn = localStorage.getItem('email');
   return (
     <div>
       <video className="absolute inset-0 w-full h-auto object-cover" src={video} autoPlay muted loop />

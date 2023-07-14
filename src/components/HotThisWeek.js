@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
-import video from '../assets/trailer.mp4'
 
 const HotThisWeek = () => {
     const [movies, setMovies] = useState([]);

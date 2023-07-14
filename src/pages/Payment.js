@@ -1,6 +1,5 @@
-import React, {useState, useEffect, useContext} from 'react'
+import React, {useState, useEffect} from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
-import { BookingContext } from "../components/context/BookingContext";
 import axios from 'axios';
 import { ChakraProvider, Alert, AlertIcon, CloseButton } from '@chakra-ui/react';
 
@@ -15,7 +14,6 @@ const Payment = () => {
     const [total, setTotal] = useState("");
     const [error, setError] = useState("");
     const [newBudget, setNewBudget] = useState(0);
-    // const { username, userage } = useContext(BookingContext);
     const [showAlert, setShowAlert] = useState(false);
 
     useEffect(() => {
@@ -33,14 +31,12 @@ const Payment = () => {
         .catch(error => {
           console.error('Error fetching movies:', error);
         });
-  
-     
 
       const storedString = localStorage.getItem("name");
       if (storedString) {
         setName(storedString);
       }
-     
+      
       const storedAge = localStorage.getItem("age");
       if(storedAge){
         setAge(storedAge);
@@ -71,18 +67,6 @@ const Payment = () => {
         const countBudget = budget - total;
         setNewBudget(countBudget);
         localStorage.setItem("budget", countBudget);
-
-        // const fixedSeatsString = localStorage.getItem("fixedSeats");
-        // const selectedSeatsString = localStorage.getItem("selectedSeats");
-
-        // let fixedSeats = fixedSeatsString ? JSON.parse(fixedSeatsString) : [];
-        // const selectedSeats = selectedSeatsString ? JSON.parse(selectedSeatsString) : [];
-
-        // fixedSeats = [...fixedSeats, ...selectedSeats];
-
-        // localStorage.setItem("fixedSeats", JSON.stringify(fixedSeats));
-        // localStorage.setItem("selectedSeats", JSON.stringify([]));
-        
         navigate('/paymentsuccess');
       }
     })

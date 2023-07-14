@@ -5,8 +5,7 @@ import {
     signOut,
     onAuthStateChanged
 } from "firebase/auth";
-import {auth, db} from "../../config";
-import {setDoc, doc} from "firebase/firestore";
+import {auth} from "../../config";
 
 const userAuthContext = createContext();
 
@@ -15,9 +14,6 @@ export function UserAuthContextProvider({children}){
 
     function signUp(email, password){
         return createUserWithEmailAndPassword(auth, email, password);
-        // setDoc(doc(db, 'users', email), {
-        //     checkedOutMovies : []
-        // })
     }
 
     function logIn(email, password){

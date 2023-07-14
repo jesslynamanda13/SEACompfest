@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Box, Button, ChakraProvider, Alert, AlertIcon, CloseButton } from '@chakra-ui/react';
+import { Box, ChakraProvider, Alert, AlertIcon, CloseButton } from '@chakra-ui/react';
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -53,10 +53,8 @@ const MovieList = () => {
       )}
       </ChakraProvider>
 
-      
     </div>
-
-    
+ 
   );
 };
 
